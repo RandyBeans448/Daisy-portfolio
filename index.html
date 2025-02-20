@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/keen-slider/5.5.0/keen-slider.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/keen-slider/5.5.0/keen-slider.min.css" />
+    <style>
+        .slideshow-container {
+            width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        .mySlides {
+            text-align: justify;
+        }
+
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        .top-bar {
+            position: sticky;
+            top: 0;
+            height: auto;
+            z-index: 100;
+            background-color: white;
+            border-bottom: solid 1px #ccc;
+        }
+
+        .min-height {
+            min-height: 650px;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transition: opacity 0.05s ease-in-out;
+        }
+
+        /* @keyframes fade {
+            from { opacity: .4 }
+            to { opacity: 1 }
+        } */
+
+        @media (max-width: 768px) {
+            .slideshow-container {
+                padding: 0 15px;
+            }
+
+            #prev,
+            #next {
+                top: 40%;
+                padding: 8px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden">
+
+    <div class="w-full top-bar">
+        <div class="ml-4 flex flex-row justify-between md:justify-start items-center">
+            <button onclick="scrollToSection('home')"
+                class="fade-in my-2 mx-1 px-3 py-1 md:my-4 md:mx-2 md:px-4 md:py-2 text-sm md:text-base rounded-md shadow-md transition-all duration-300 hover:text-black hover:bg-gray-200 hover:shadow-lg focus:outline-none">
+                Home
+            </button>
+            <button onclick="scrollToSection('about')"
+                class="fade-in my-2 mx-1 px-3 py-1 md:my-4 md:mx-2 md:px-4 md:py-2 text-sm md:text-base rounded-md shadow-md transition-all duration-300 hover:text-black hover:bg-gray-200 hover:shadow-lg focus:outline-none">
+                About
+            </button>
+            <button onclick="scrollToSection('videography')"
+                class="fade-in my-2 mx-1 px-3 py-1 md:my-4 md:mx-2 md:px-4 md:py-2 text-sm md:text-base rounded-md shadow-md transition-all duration-300 hover:text-black hover:bg-gray-200 hover:shadow-lg focus:outline-none">
+                Videography
+            </button>
+            <button onclick="scrollToSection('photography')"
+                class="fade-in my-2 mx-1 px-3 py-1 md:my-4 md:mx-2 md:px-4 md:py-2 text-sm md:text-base rounded-md shadow-md transition-all duration-300 hover:text-black hover:bg-gray-200 hover:shadow-lg focus:outline-none">
+                Photography
+            </button>
+            <button onclick="scrollToSection('contact')"
+                class="fade-in my-2 mx-1 px-3 py-1 md:my-4 md:mx-2 md:px-4 md:py-2 text-sm md:text-base rounded-md shadow-md transition-all duration-300 hover:text-black hover:bg-gray-200 hover:shadow-lg focus:outline-none">
+                Contact
+            </button>
+        </div>
+    </div>
+
+    <div id="home" class="flex justify-center w-full h-screen bg-gray-100 py-24">
+        <div class="flex flex-col md:text-left text-center justify-center w-full md:ml-10">
+            <h1 class="fade-in text-4xl md:text-7xl font-thin m-4 ">Daisy Needham</h1>
+            <h2 class="fade-in text-4xl md:text-7xl font-thin m-4 ">Content creator portfolio</h2>
+        </div>
+    </div>
+
+    <div id="about" class="flex flex-col justify-center w-full h-screen pb-10">
+        <div class="md:ml-10">
+            <h1 class="fade-in md:text-left text-center text-4xl md:text-7xl font-thin m-4 ">About</h1>
+        </div>
+        <div>
+            <p class="m-4 md:text-left text-center md:ml-14">
+                I’m a passionate content creator specialising in engaging video and image content for Instagram and
+                TikTok.
+                From ideation, capturing iPhone content, and video editing using Adobe software to producing
+                high-quality
+                visuals, I create dynamic and scroll-stopping content that resonates with audiences. With experience
+                both
+                in-house and on set, I develop UGC-style, brand-led social and eCommerce content for lifestyle and
+                beauty
+                brands, while also writing and delivering voiceovers, starring in content, and closely collaborating
+                within
+                the creative team as well as teams across the wider business, including Marketing, Academy, and NPD. My
+                expertise extends to product and model styling, ensuring every visual aligns with brand identity and
+                storytelling.
+                With a background in Fashion Business, Promotion, and Garment Technology, I bring a keen eye for detail,
+                a
+                strong creative vision, and a deep understanding of industry trends. I thrive in fast-paced,
+                collaborative
+                environments where strategy meets storytelling—always aiming to elevate brands with fresh, innovative
+                content.
+            </p>
+        </div>
+    </div>
+
+    <div id="videography" class="flex flex-col justify-center w-full py-24">
+
+        <div class="md:ml-10">
+            <h1 class="fade-in md:text-left text-center text-4xl md:text-7xl font-thin m-4 ">Videography</h1>
+        </div>
+
+        <div class="flex flex-row justify-evenly w-full my-24">
+
+            <div class="flex justify-start  mx-4 w-full sm:w-[200px] md:w-[300px] lg:w-[350px]">
+                <video src="images/01_25002_SOCIAL_LAUNCH.mp4" controls
+                    class="w-full h-auto object-cover shadow-lg"></video>
+            </div>
+
+            <div class="flex justify-end mx-4 mt-4 w-full sm:w-[200px] md:w-[300px] lg:w-[550px]">
+
+                <div class="flex flex-col justify-center text-center md:text-left">
+                    <h2 class="text-2xl md:text-3xl mb-4 font-semibold">Portfolio Item 1</h2>
+                    <p class="text-sm md:text-base leading-relaxed">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        It has survived not only five centuries, but also the leap into electronic typesetting.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-row-reverse justify-evenly w-full my-24">
+
+            <div class="flex justify-start  mx-4 w-full sm:w-[200px] md:w-[300px] lg:w-[350px]">
+                <video src="images/01_25003_TEASE_01_FINAL.mp4" controls
+                    class="w-full h-auto object-cover shadow-lg"></video>
+            </div>
+
+            <div class="flex justify-end mx-4 mt-4 w-full sm:w-[200px] md:w-[300px] lg:w-[550px]">
+
+                <div class="flex flex-col justify-center text-center md:text-left">
+                    <h2 class="text-2xl md:text-3xl mb-4 font-semibold">Portfolio Item 2</h2>
+                    <p class="text-sm md:text-base leading-relaxed">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        It has survived not only five centuries, but also the leap into electronic typesetting.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-row justify-evenly w-full my-24">
+
+            <div class="flex justify-start  mx-4 w-full sm:w-[200px] md:w-[300px] lg:w-[350px]">
+                <video src="images/25003_EARLY SPRING_COMPARISON SWATCH_V7.mp4" controls
+                    class="w-full h-auto object-cover shadow-lg"></video>
+            </div>
+
+            <div class="flex justify-end mx-4 mt-4 w-full sm:w-[200px] md:w-[300px] lg:w-[550px]">
+
+                <div class="flex flex-col justify-center text-center md:text-left">
+                    <h2 class="text-2xl md:text-3xl mb-4 font-semibold">Portfolio Item 3</h2>
+                    <p class="text-sm md:text-base leading-relaxed">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        It has survived not only five centuries, but also the leap into electronic typesetting.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-row-reverse justify-evenly w-full my-24">
+
+            <div class="flex justify-start  mx-4 w-full sm:w-[200px] md:w-[300px] lg:w-[350px]">
+                <video src="images/TGB_BlackFriday_QuickShape_V3.mp4" controls
+                    class="w-full h-auto object-cover shadow-lg"></video>
+            </div>
+
+            <div class="flex justify-end mx-4 mt-4 w-full sm:w-[200px] md:w-[300px] lg:w-[550px]">
+
+                <div class="flex flex-col justify-center text-center md:text-left">
+                    <h2 class="text-2xl md:text-3xl mb-4 font-semibold">Portfolio Item 4</h2>
+                    <p class="text-sm md:text-base leading-relaxed">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        It has survived not only five centuries, but also the leap into electronic typesetting.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-row justify-evenly w-full my-24">
+
+            <div class="flex justify-start  mx-4 w-full sm:w-[200px] md:w-[300px] lg:w-[350px]">
+                <video src="images/TGB_SPA_Social_Tease_Reel_Pillow Powder_Trade.mp4" controls
+                    class="w-full h-auto object-cover shadow-lg"></video>
+            </div>
+
+            <div class="flex justify-end mx-4 mt-4 w-full sm:w-[200px] md:w-[300px] lg:w-[550px]">
+
+                <div class="flex flex-col justify-center text-center md:text-left">
+                    <h2 class="text-2xl md:text-3xl mb-4 font-semibold">Portfolio Item 3</h2>
+                    <p class="text-sm md:text-base leading-relaxed">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        It has survived not only five centuries, but also the leap into electronic typesetting.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-row-reverse justify-evenly w-full my-24">
+
+            <div class="flex justify-start  mx-4 w-full sm:w-[200px] md:w-[300px] lg:w-[350px]">
+                <video src="images/TGB_SPA_Social_Tease_Reel_Texture.mp4" controls
+                    class="w-full h-auto object-cover shadow-lg"></video>
+            </div>
+
+            <div class="flex justify-end mx-4 mt-4 w-full sm:w-[200px] md:w-[300px] lg:w-[550px]">
+
+                <div class="flex flex-col justify-center text-center md:text-left">
+                    <h2 class="text-2xl md:text-3xl mb-4 font-semibold">Portfolio Item 4</h2>
+                    <p class="text-sm md:text-base leading-relaxed">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        It has survived not only five centuries, but also the leap into electronic typesetting.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-row justify-evenly w-full my-24">
+
+            <div class="flex justify-start  mx-4 w-full sm:w-[200px] md:w-[300px] lg:w-[350px]">
+                <video src="images/TGB_SPA_Social_Tease_Reel.mp4" controls
+                    class="w-full h-auto object-cover shadow-lg"></video>
+            </div>
+
+            <div class="flex justify-end mx-4 mt-4 w-full sm:w-[200px] md:w-[300px] lg:w-[550px]">
+
+                <div class="flex flex-col justify-center text-center md:text-left">
+                    <h2 class="text-2xl md:text-3xl mb-4 font-semibold">Portfolio Item 3</h2>
+                    <p class="text-sm md:text-base leading-relaxed">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        It has survived not only five centuries, but also the leap into electronic typesetting.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="photography" class="flex flex-col justify-center w-full py-24">
+
+        <div class="md:ml-10">
+            <h1 class="fade-in md:text-left text-center text-4xl md:text-7xl font-thin m-4 ">Photography</h1>
+        </div>
+
+        <div class="flex flex-row justify-evenly w-full my-24">
+
+            <div class="flex justify-start  mx-4 w-full sm:w-[200px] md:w-[300px] lg:w-[350px]">
+                <img src="images/webimage-5A27BDD8-E299-43D4-8E5835673DFC805A.png"
+                    class="w-full h-auto object-cover shadow-lg"></img>
+            </div>
+
+            <div class="flex justify-end mx-4 mt-4 w-full sm:w-[200px] md:w-[300px] lg:w-[550px]">
+
+                <div class="flex flex-col justify-center text-center md:text-left">
+                    <h2 class="text-2xl md:text-3xl mb-4 font-semibold">Portfolio Item 1</h2>
+                    <p class="text-sm md:text-base leading-relaxed">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        It has survived not only five centuries, but also the leap into electronic typesetting.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-row-reverse justify-evenly w-full my-24">
+
+            <div class="flex justify-start  mx-4 w-full sm:w-[200px] md:w-[300px] lg:w-[350px]">
+                <img src="images/webimage-5A27BDD8-E299-43D4-8E5835673DFC805A.png"
+                    class="w-full h-auto object-cover shadow-lg"></img>
+            </div>
+
+            <div class="flex justify-end mx-4 mt-4 w-full sm:w-[200px] md:w-[300px] lg:w-[550px]">
+
+                <div class="flex flex-col justify-center text-center md:text-left">
+                    <h2 class="text-2xl md:text-3xl mb-4 font-semibold">Portfolio Item 2</h2>
+                    <p class="text-sm md:text-base leading-relaxed">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        It has survived not only five centuries, but also the leap into electronic typesetting.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-row justify-evenly w-full my-24">
+
+            <div class="flex justify-start  mx-4 w-full sm:w-[200px] md:w-[300px] lg:w-[350px]">
+                <img src="images/webimage-5A27BDD8-E299-43D4-8E5835673DFC805A.png"
+                    class="w-full h-auto object-cover shadow-lg"></img>
+            </div>
+
+            <div class="flex justify-end mx-4 mt-4 w-full sm:w-[200px] md:w-[300px] lg:w-[550px]">
+
+                <div class="flex flex-col justify-center text-center md:text-left">
+                    <h2 class="text-2xl md:text-3xl mb-4 font-semibold">Portfolio Item 3</h2>
+                    <p class="text-sm md:text-base leading-relaxed">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        It has survived not only five centuries, but also the leap into electronic typesetting.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-row-reverse justify-evenly w-full my-24">
+
+            <div class="flex justify-start  mx-4 w-full sm:w-[200px] md:w-[300px] lg:w-[350px]">
+                <img src="images/webimage-5A27BDD8-E299-43D4-8E5835673DFC805A.png"
+                    class="w-full h-auto object-cover shadow-lg"></img>
+            </div>
+
+            <div class="flex justify-end mx-4 mt-4 w-full sm:w-[200px] md:w-[300px] lg:w-[550px]">
+
+                <div class="flex flex-col justify-center text-center md:text-left">
+                    <h2 class="text-2xl md:text-3xl mb-4 font-semibold">Portfolio Item 4</h2>
+                    <p class="text-sm md:text-base leading-relaxed">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        It has survived not only five centuries, but also the leap into electronic typesetting.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="contact" class="flex flex-col justify-center w-full h-screen bg-gray-100 py-24">
+        
+        <div class="md:ml-10">
+            <h1 class="fade-in md:text-left text-center text-4xl md:text-7xl font-thin m-4 ">Contact</h1>
+        </div>
+
+        <div class="mt-10">
+
+            <div class="md:ml-10">
+                <h1 class="fade-in md:text-left text-center text-2xl md:text-4xl font-thin m-4 ">Email: daisy@gmail.com</h1>
+            </div>
+    
+            <div class="md:ml-10">
+                <h1 class="fade-in md:text-left text-center text-2xl md:text-4xl font-thin m-4 ">Phone: +44 7549 403225</h1>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        function scrollToSection(section) {
+            document.getElementById(section).scrollIntoView({ behavior: "smooth" });
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let elements = document.querySelectorAll('.fade-in');
+
+            elements.forEach(el => {
+                let randomTime = 0.5; // Random time between 1 and 4 seconds
+                el.style.transition = `opacity ${randomTime}s ease-in-out`;
+                setTimeout(() => {
+                    el.style.opacity = 1;
+                }, Math.random() * 2000); // Random delay before fade-in starts
+            });
+        });
+    </script>
+</body>
+
+</html>
